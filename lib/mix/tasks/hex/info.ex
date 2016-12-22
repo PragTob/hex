@@ -37,9 +37,10 @@ defmodule Mix.Tasks.Hex.Info do
   end
 
   defp general do
-    Hex.Shell.info "Hex:    #{Hex.version}"
-    Hex.Shell.info "Elixir: #{System.version}"
-    Hex.Shell.info "OTP:    #{Hex.Utils.otp_version}"
+    Hex.Shell.info "Hex:        #{Hex.version}"
+    Hex.Shell.info "Hex client: #{inspect HexClient.info}"
+    Hex.Shell.info "Elixir:     #{System.version}"
+    Hex.Shell.info "OTP:        #{Hex.Utils.otp_version}"
     Hex.Shell.info ""
     Hex.Shell.info "Built with: Elixir #{Hex.elixir_version} and OTP #{Hex.otp_version}"
 

@@ -2,6 +2,10 @@ defmodule Mix.Tasks.Hex.InfoTest do
   use HexTest.Case
   @moduletag :integration
 
+  test "general info" do
+    Mix.Tasks.Hex.Info.run([])
+  end
+
   test "package" do
     Mix.Tasks.Hex.Info.run(["ex_doc"])
     assert_received {:mix_shell, :info, ["Some description\n"]}

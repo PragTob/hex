@@ -54,8 +54,8 @@ defmodule Hex.Mixfile do
   defp elixirc_options(:prod), do: [debug_info: false]
   defp elixirc_options(_),     do: []
 
-  defp elixirc_paths(:test), do: ["lib", "test/support"]
-  defp elixirc_paths(_),     do: ["lib"]
+  defp elixirc_paths(:test), do: ["lib", "hex_client/lib", "test/support"]
+  defp elixirc_paths(_),     do: ["lib", "hex_client/lib"]
 
   defp xref do
     [exclude: [
